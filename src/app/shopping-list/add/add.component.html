@@ -1,0 +1,5 @@
+<div class="products-add">
+    <input type="text" [value]="productToAdd.name" />
+    <input type="number" [value]="productToAdd.quantity" />    
+    <input type="button" value="Add" (click)="addProduct(productToAdd.name, productToAdd.quantity);">
+</div>

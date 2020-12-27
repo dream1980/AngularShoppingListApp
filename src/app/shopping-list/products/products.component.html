@@ -1,0 +1,11 @@
+<div class="products-search">
+    Search products:
+    <input type="search">
+</div>
+
+<div *ngFor="let product of products" class="product-cards">
+    <span>
+        <input type="checkbox" (click)="deleteProduct(product.id);">
+        {{ product.name }}, quantity: {{ product.quantity }}
+    </span>
+</div>
