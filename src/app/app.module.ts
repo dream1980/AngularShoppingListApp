@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { AddComponent } from './shopping-list/add/add.component';
 import { ProductsComponent } from './shopping-list/products/products.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingListComponent,
     AddComponent,
-    ProductsComponent
+    ProductsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

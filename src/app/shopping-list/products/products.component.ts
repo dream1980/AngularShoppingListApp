@@ -9,6 +9,7 @@ import { Product } from '../product';
 export class ProductsComponent implements OnInit {
 
   @Input() products: Array<Product> = new Array<Product>();
+  productToSearch: string = "";
 
   constructor() {
     //_productsArr = this.products;
@@ -26,10 +27,19 @@ export class ProductsComponent implements OnInit {
     this.products = this.products.filter(product => product.id != id);
   }
 
+  updateSearchParams(name: string) : void {
+    this.productToSearch = name;
+  }
+
   // filter products by name
-  searchProducts(name: string): Array<Product> {
+  /* searchProducts(product: Product): boolean {
 
     // get all products that their name contain the name parameter
-    return this.products.filter(product => product.name.includes(name));
-  }
+    //console.log(name);
+    //return this.products.filter(product => product.name.includes(name));
+    if (product.name.toLowerCase().includes(this.productToSearch.toLowerCase()))
+      return true;
+
+    return false;
+  } */
 }

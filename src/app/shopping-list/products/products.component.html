@@ -1,9 +1,9 @@
 <div class="products-search">
     Search products:
-    <input type="search">
+    <input type="search" (change)="updateSearchParams($event.target.value);">
 </div>
 
-<div *ngFor="let product of products" class="product-cards">
+<div *ngFor="let product of products | filter:productToSearch " class="product-cards">
     <span>
         <input type="checkbox" (click)="deleteProduct(product.id);">
         {{ product.name }}, quantity: {{ product.quantity }}

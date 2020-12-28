@@ -9,7 +9,7 @@ import { Product } from '../product';
 export class AddComponent implements OnInit {
 
   @Input() products: Array<Product> = new Array<Product>();
-  productToAdd: Product = new Product(0, "", 0);
+  productToAdd: Product = new Product();
   
   constructor() { }
 
